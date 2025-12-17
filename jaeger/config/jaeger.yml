@@ -1,0 +1,20 @@
+collector:
+  zipkin:
+    host-port: ":9411"
+  
+  otlp:
+    grpc:
+      host-port: ":14250"
+    http:
+      host-port: ":14268"
+
+storage:
+  type: memory
+  memory:
+    max-traces: 50000
+
+query:
+  base-path: /
+  
+agent:
+  host-port: ":6831"
